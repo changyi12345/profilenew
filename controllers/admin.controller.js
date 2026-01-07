@@ -5,7 +5,7 @@ const Skill = require('../models/Skill');
 const Project = require('../models/Project');
 const Experience = require('../models/Experience');
 const Contact = require('../models/Contact');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 // Auth
