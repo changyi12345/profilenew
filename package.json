@@ -2,10 +2,10 @@
   "name": "profile-webapp",
   "version": "1.0.0",
   "description": "Portfolio Web App",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "node app.js",
+    "server": "nodemon app.js",
     "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "vercel-build": "cd client && npm install && npm run build && cd .. && mkdir -p public && cp -r client/out/* public/"
