@@ -45,7 +45,13 @@ app.use('/api/v1', require('./routes/api/portfolio.routes'));
 
 // Serve React App for all other routes (SPA)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    const indexPath = path.join(__dirname, 'public', 'index.html');
+    if (require('fs').existsSync(indexPath)) {
+        res.sendFile(indexPath);
+    } else {
+        console.error("Frontend build not found at:", indexPath);
+        res.status(404).send("Frontend application is not built. Please check deployment logs.");
+    }
 });
 
 const PORT = process.env.PORT || 5000;

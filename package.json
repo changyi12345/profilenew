@@ -8,7 +8,7 @@
     "server": "nodemon server.js",
     "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "vercel-build": "cd client && npm install && npm run build && cd .. && cp -r client/out/* public/"
+    "vercel-build": "cd client && npm install && npm run build && cd .. && mkdir -p public && cp -r client/out/* public/"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
