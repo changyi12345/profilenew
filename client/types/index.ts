@@ -5,7 +5,7 @@ export interface Hero {
   subtitle: string;
   primaryCtaText: string;
   secondaryCtaText: string;
-  heroImage?: string;
+  heroImage?: string; // Optional image field
 }
 
 export interface Skill {
