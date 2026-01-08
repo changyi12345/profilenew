@@ -1,4 +1,5 @@
 [build]
+  base = ""
   # Delete yarn.lock first, then install with npm, then build
   command = "rm -f yarn.lock && npm install --legacy-peer-deps && npm run build"
   publish = ".next"
